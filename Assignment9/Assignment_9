@@ -1,0 +1,90 @@
+#include <iostream>
+using namespace std;
+enum account_type
+{
+     SAVING=1;
+     CURRENT=2;
+     DMAT=3;  
+};
+class insufficient_funds
+{
+    private:
+    int accid;
+    double cur_balance;
+    double withdraw_amount;
+
+
+    public:
+
+    insufficient_funds(int accid,double cur_balance,double withdraw_amount)
+    {
+        this->accid=accid;
+        this->cur_balance=cur_balance;
+        this->withdraw_amount=withdraw_amount;
+    }
+    void display()
+    {
+       cout<<"Error :Insufficient Fund"<<endl;
+       cout<<"sorry! you cant withdraw "<<this->withdraw_amount<<"as you have Rupees "<<this->cur_balence<<"funds in your bank account"<<endl;
+
+    }
+    void display2(string type)
+    {
+        cout<<type<<"amount cannot be equal to or less than zero"<<endl;
+    }
+
+};
+class account
+{
+    private:
+    int id;
+    account_type type;
+    double balance;
+
+    public:
+    account()
+    {
+    this->balance=0
+    }
+    account()
+    {
+    this->balance=balance;
+    this->type=type;
+    }
+    void accept()
+    {
+        int choice;
+        cout<<"Enter id= ";
+        cin>>id;
+        cout<<"Enter Account type: "<<endl;
+        cout<<"1.press 1 forSAVING: "<<endl;
+        cout<<"2.press 2 for CURRENT: "<<endl;
+        cout<<"3.press 3 for DMAT: "<<endl;
+         cin>>choice;
+       this->type=account_type(choice);
+       cout<<"Enter balance= ";
+       cin>>this->balance;
+
+ int get_id()
+{
+    return this->id;
+ }
+void set_type(account_type(type))
+{
+     this->type=type;
+}
+int get_type()
+{
+    return this->type;
+
+}
+void set_balance(double balance)
+{
+   this->balance=balance;
+}
+double get_balance()
+{
+    return Balance;
+}
+
+    }
